@@ -8,62 +8,94 @@
     <style>
         body {
             font-family: "Georgia", serif;
-            background-color: #f4f4f4;
+            background-color: #f8f1ec;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
             text-align: center;
         }
         header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
+        .nav-links {
+            display: flex;
+            gap: 20px;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
+        .nav-links a {
             text-decoration: none;
+            color: black;
             font-size: 18px;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .about-box {
+            width: 30%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
+            padding: 12px 24px;
+            margin-top: 30px;
             font-size: 18px;
             color: white;
-            background-color: #007BFF;
+            background-color: #333;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             text-decoration: none;
             transition: background 0.3s ease;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #555;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">À propos de moi</a></li>
-                <li><a href="projets.html">Projets Réalisés</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section>
-        <h2>À propos de moi</h2>
-        <p>Je suis étudiant en informatique et passionné par le développement web et le game dev.</p>
-        <p>Bienvenue sur mon portfolio où je présente mes projets et compétences.</p>
+    <div class="container">
+        <header>
+            <h1>Mon Portfolio</h1>
+            <nav class="nav-links">
+                <a href="index.html">À propos</a>
+                <a href="projets.html">Projets</a>
+            </nav>
+        </header>
+        <div class="about-section">
+            <div class="about-box">
+                <h3>Développeur Web</h3>
+                <p>Passionné par la création d'expériences interactives et immersives.</p>
+            </div>
+            <div class="about-box">
+                <h3>Game Dev</h3>
+                <p>Exploration du développement de jeux avec Unreal Engine 5 et C++.</p>
+            </div>
+            <div class="about-box">
+                <h3>Innovateur</h3>
+                <p>Toujours à la recherche de nouvelles technologies et approches.</p>
+            </div>
+        </div>
         <a href="projets.html" class="btn">Voir mes projets</a>
-    </section>
+    </div>
 </body>
 </html>
