@@ -12,22 +12,47 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            overflow-y: scroll;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8f1ec;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
         .container {
             width: 80%;
             max-width: 900px;
             text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
         }
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             width: 100%;
             padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f8f1ec;
+            z-index: 1000;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         .nav-links {
             display: flex;
@@ -43,10 +68,24 @@
             font-size: 40px;
             font-weight: bold;
         }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
         .about-section {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+            width: 100%;
+        }
+        .about-boxes {
+            display: flex;
             justify-content: space-between;
-            margin-top: 40px;
+            width: 100%;
         }
         .about-box {
             width: 30%;
@@ -70,32 +109,57 @@
         .btn:hover {
             background-color: #555;
         }
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Mon Portfolio</h1>
+        <nav class="nav-links">
+            <a href="index.html">À propos</a>
+            <a href="projets.html">Projets</a>
+        </nav>
+    </header>
     <div class="container">
-        <header>
-            <h1>Mon Portfolio</h1>
-            <nav class="nav-links">
-                <a href="index.html">À propos</a>
-                <a href="projets.html">Projets</a>
-            </nav>
-        </header>
         <div class="about-section">
-            <div class="about-box">
-                <h3>Développeur Web</h3>
-                <p>Passionné par la création d'expériences interactives et immersives.</p>
-            </div>
-            <div class="about-box">
-                <h3>Game Dev</h3>
-                <p>Exploration du développement de jeux avec Unreal Engine 5 et C++.</p>
-            </div>
-            <div class="about-box">
-                <h3>Innovateur</h3>
-                <p>Toujours à la recherche de nouvelles technologies et approches.</p>
+            <img src="image/pdp.png" alt="Ma photo" class="profile-photo">
+            <div class="about-boxes">
+                <div class="about-box">
+                    <h3>Développeur Web</h3>
+                    <p>Passionné par la création d'expériences interactives et immersives.</p>
+                </div>
+                <div class="about-box">
+                    <h3>Game Dev</h3>
+                    <p>Exploration du développement de jeux avec Unreal Engine 5 et C++.</p>
+                </div>
+                <div class="about-box">
+                    <h3>Innovateur</h3>
+                    <p>Toujours à la recherche de nouvelles technologies et approches.</p>
+                </div>
             </div>
         </div>
         <a href="projets.html" class="btn">Voir mes projets</a>
     </div>
+    <footer>
+        <p>Contactez-moi :</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/enzo-pulzatto-05000429b/" target="_blank">LinkedIn</a>
+            <a href="cv.pdf" target="_blank">Mon CV</a>
+        </div>
+    </footer>
 </body>
 </html>
