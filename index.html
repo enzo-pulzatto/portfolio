@@ -16,6 +16,7 @@
             min-height: 100vh;
             align-items: center;
             overflow-y: scroll;
+            overflow-x: hidden;
         }
         ::-webkit-scrollbar {
             width: 10px;
@@ -67,6 +68,20 @@
         h1 {
             font-size: 40px;
             font-weight: bold;
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin-top: 40px;
+        }
+        .skills img {
+            width: 60px;
+            height: 60px;
+        }
+        .skills img:nth-child(n+6) {
+            grid-column: span 1;
         }
         .profile-photo {
             width: 150px;
@@ -153,6 +168,17 @@
             </div>
         </div>
         <a href="projets.html" class="btn">Voir mes projets</a>
+        <div class="skills">
+            <img src="icons/unity.png" alt="Unity">
+            <img src="icons/unreal.png" alt="Unreal Engine">
+            <img src="icons/csharp.png" alt="C#">
+            <img src="icons/cplusplus.png" alt="C++">
+            <img src="icons/python.png" alt="Python">
+            <img src="icons/html.png" alt="HTML">
+            <img src="icons/css.png" alt="CSS">
+            <img src="icons/javascript.png" alt="JavaScript">
+            <img src="icons/sql.png" alt="SQL">
+        </div>
     </div>
     <footer>
         <p>Contactez-moi :</p>
