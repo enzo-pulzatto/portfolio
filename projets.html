@@ -20,24 +20,39 @@
             width: 80%;
             max-width: 900px;
             text-align: center;
-            margin-top: 100px;
+            margin-top: 80px;
         }
         header {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
-            padding: 20px;
+            padding: 10px;
             position: fixed;
             top: 0;
             left: 0;
             background-color: #f8f1ec;
             z-index: 1000;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            height: 60px;
         }
         .header-title {
-            text-align: center;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 14px;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #555;
         }
         .project {
             margin-bottom: 40px;
@@ -50,21 +65,6 @@
         .project img, .project video {
             width: 100%;
             border-radius: 10px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin-top: 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #333;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #555;
         }
         footer {
             margin-top: auto;
@@ -90,57 +90,59 @@
     </header>
     <div class="container">
         <div class="project">
-            <h2>Steganographie</h2>
+            <h2>Stéganographie C++</h2>
             <video controls>
                 <source src="Stegano.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo.
             </video>
-            <p>Description du projet 1.</p>
-            <a href="#" class="btn">Voir plus</a>
+            <p>Développement d'un outil de stéganographie doté d'une interface permettant de stocker des données dans les couleurs d'une image Bitmap (.bmp) et de récupérer ces données via la même interface. Projet réalisé en 1 semaine.</p>
+            
         </div>
         <div class="project">
-            <h2>Rugby IA</h2>
+            <h2>Rugby IA SFML</h2>
             <video controls>
                 <source src="rugby.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo.
             </video>
-            <p>Description du projet 2.</p>
-            <a href="#" class="btn">Voir plus</a>
+            <p>Développement d'un jeu de rugby simplifié en C++ utilisant SFML pour l'affichage graphique et la gestion des éléments visuels. Projet réalisé en 2 semaines.</p>
+            
         </div>
         <div class="project">
-            <h2>Premier projet unity platformer 2D</h2>
+            <h2>Premier projet Unity Platformer 2D</h2>
             <video controls>
                 <source src="Charbi.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo.
             </video>
-            <p>Description du projet 2.</p>
-            <a href="#" class="btn">Voir plus</a>
+            <p>Première prise en main d'Unity. L'objectif était de créer un jeu doté d'une mécanique innovante. Projet réalisé en 2 semaines.</p>
+            
         </div>
         <div class="project">
-            <h2>Premier projet unity platformer 2D</h2>
+            <h2>Unity Shader et Feedback</h2>
             <video controls>
                 <source src="Attack.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo.
             </video>
-            <p>Description du projet 2.</p>
-            <a href="#" class="btn">Voir plus</a>
+            <p>Prise en main des shaders Unity. L'objectif était de créer un jeu au tour par tour mettant l'accent sur les particules, les shaders et le game feel. Projet réalisé en 2 semaines.</p>
+            
         </div>
         <div class="project">
-            <h2>Premier projet unity platformer 2D</h2>
+            <h2>FPS Unity</h2>
             <video controls>
                 <source src="Survival.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo.
             </video>
-            <p>Description du projet 2.</p>
-            <a href="#" class="btn">Voir plus</a>
+            <p>Développement d'un FPS intégrant un character controller (déplacement, sprint, saut et accroupissement), deux types d'armes et des ennemis. Projet réalisé en 1 semaine.</p>
+            
         </div>
     </div>
     <footer>
         <p>Contactez-moi :</p>
         <div class="footer-links">
-            <a href="https://www.linkedin.com/in/ton-profil" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/enzo-pulzatto-05000429b/" target="_blank">LinkedIn</a>
             <a href="cv.pdf" target="_blank">Mon CV</a>
         </div>
+        <p>Email : enzopulzatto81@gmail.com</p>
+        <p>Téléphone : 06 68 09 16 55</p>
     </footer>
 </body>
 </html>
