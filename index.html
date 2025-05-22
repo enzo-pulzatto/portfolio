@@ -143,7 +143,6 @@
             margin-top: 50px;
             flex-wrap: nowrap;
         }
-
         .project-preview img {
             max-height: 300px;
             height: auto;
@@ -153,16 +152,36 @@
             transition: transform 0.3s ease;
             max-width: 100%;
         }
-
         .project-preview img:hover {
             transform: scale(1.05);
         }
-
-        
-
+        .lang-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
     </style>
+    <script>
+        function toggleLang() {
+            const fr = document.querySelectorAll('[data-lang="fr"]');
+            const en = document.querySelectorAll('[data-lang="en"]');
+            const langBtn = document.querySelector('.lang-btn');
+            const isFr = fr[0].style.display !== 'none';
+            fr.forEach(el => el.style.display = isFr ? 'none' : 'block');
+            en.forEach(el => el.style.display = isFr ? 'block' : 'none');
+            langBtn.textContent = isFr ? 'Switch to French' : 'Changer de langue';
+        }
+    </script>
 </head>
 <body>
+    <button class="lang-btn" onclick="toggleLang()">Changer de langue</button>
     <header>
         <h1>Mon Portfolio</h1>
         <nav class="nav-links">
@@ -175,20 +194,27 @@
             <img src="image/pdp.png" alt="Ma photo" class="profile-photo">
             <div class="about-boxes">
                 <div class="about-box">
-                    <h3>Game Dev</h3>
-                    <p>Exploration du développement de jeux avec Unity, Unreal Engine 5 et C++.</p>
+                    <h3 data-lang="fr">Game Dev</h3>
+                    <h3 data-lang="en" style="display:none">Game Developer</h3>
+                    <p data-lang="fr">Exploration du développement de jeux avec Unity, Unreal Engine 5 et C++.</p>
+                    <p data-lang="en" style="display:none">Exploring game development with Unity, Unreal Engine 5, and C++.</p>
                 </div>
                 <div class="about-box">
-                    <h3>Innovateur</h3>
-                    <p>Toujours à la recherche de nouvelles technologies et d'approches innovantes.</p>
+                    <h3 data-lang="fr">Innovateur</h3>
+                    <h3 data-lang="en" style="display:none">Innovative</h3>
+                    <p data-lang="fr">Toujours à la recherche de nouvelles technologies et d'approches innovantes.</p>
+                    <p data-lang="en" style="display:none">Always exploring new technologies and innovative approaches.</p>
                 </div>
                 <div class="about-box">
-                    <h3>Ambitieux</h3>
-                    <p>Je vise à devenir Lead Développeur et Chef de projet.</p>
+                    <h3 data-lang="fr">Ambitieux</h3>
+                    <h3 data-lang="en" style="display:none">Ambitious</h3>
+                    <p data-lang="fr">Je vise à devenir Lead Développeur et Chef de projet.</p>
+                    <p data-lang="en" style="display:none">Aspiring to become a Lead Developer and Project Manager.</p>
                 </div>
             </div>
         </div>
-        <a href="projets.html" class="btn">Voir mes projets</a>
+        <a href="projets.html" class="btn" data-lang="fr">Voir mes projets</a>
+        <a href="projets.html" class="btn" data-lang="en" style="display:none">See my projects</a>
         <div class="project-preview">
             <img src="image/Shader.png" alt="Shader VFX">
             <img src="image/MyPocketLife.png" alt="My Pocket Life">
@@ -207,7 +233,8 @@
         </div>
     </div>
     <footer>
-        <p>Contactez-moi :</p>
+        <p data-lang="fr">Contactez-moi :</p>
+        <p data-lang="en" style="display:none">Contact me:</p>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/enzo-pulzatto-05000429b/" target="_blank">LinkedIn</a>
             <a href="cv.pdf" target="_blank">Mon CV</a>

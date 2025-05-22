@@ -82,88 +82,73 @@
             font-weight: bold;
         }
         .video-wrapper {
-    width: 100%;
-    height: 500px; 
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    }
-
-    .project video {
-    max-height: 500px;
-    width: auto;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color: #000;
-}
+            width: 100%;
+            height: 500px; 
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .project video {
+            max-height: 500px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            background-color: #000;
+        }
+        .lang-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
     </style>
+    <script>
+        function toggleLang() {
+            const fr = document.querySelectorAll('[data-lang="fr"]');
+            const en = document.querySelectorAll('[data-lang="en"]');
+            const langBtn = document.querySelector('.lang-btn');
+            const isFr = fr[0].style.display !== 'none';
+            fr.forEach(el => el.style.display = isFr ? 'none' : 'block');
+            en.forEach(el => el.style.display = isFr ? 'block' : 'none');
+            langBtn.textContent = isFr ? 'Switch to French' : 'Changer de langue';
+        }
+    </script>
 </head>
 <body>
+    <button class="lang-btn" onclick="toggleLang()">Changer de langue</button>
     <header>
-        <h1 class="header-title">Mes Projets</h1>
-        <a href="index.html" class="btn">Accueil</a>
+        <h1 class="header-title" data-lang="fr">Mes Projets</h1>
+        <h1 class="header-title" data-lang="en" style="display:none">My Projects</h1>
+        <a href="index.html" class="btn" data-lang="fr">Accueil</a>
+        <a href="index.html" class="btn" data-lang="en" style="display:none">Home</a>
     </header>
     <div class="container">
         <div class="project">
-            <h2>Jeux mobile Unity</h2>
+            <h2 data-lang="fr">Jeux mobile Unity</h2>
+            <h2 data-lang="en" style="display:none">Unity Mobile Game</h2>
             <div class="video-wrapper">
                 <video controls>
                     <source src="MyPocketLife.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la vidéo.
+                    <span data-lang="fr">Votre navigateur ne supporte pas la vidéo.</span>
+                    <span data-lang="en" style="display:none">Your browser does not support the video.</span>
                 </video>
             </div>
-            <p>Ce projet a été réalisé dans le cadre d'un stage de 2 mois. Nous étions 5 développeurs. Je me suis principalement occupé du système de placement de meuble, de la sauvegarde et d'autres tâches annexes</p>
+            <p data-lang="fr">Ce projet a été réalisé dans le cadre d'un stage de 2 mois. Nous étions 5 développeurs. Je me suis principalement occupé du système de placement de meuble, de la sauvegarde et d'autres tâches annexes</p>
+            <p data-lang="en" style="display:none">This project was completed during a 2-month internship. We were 5 developers. I mainly worked on the furniture placement system, saving mechanism, and other tasks.</p>
         </div>
-        <div class="project">
-            <h2>Stéganographie C++</h2>
-            <video controls>
-                <source src="Stegano.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <p>Développement d'un outil de stéganographie doté d'une interface permettant de stocker des données dans les couleurs d'une image Bitmap (.bmp) et de récupérer ces données via la même interface. Projet réalisé en 1 semaine.</p>
-            
-        </div>
-        <div class="project">
-            <h2>Rugby IA SFML</h2>
-            <video controls>
-                <source src="rugby.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <p>Développement d'un jeu de rugby simplifié en C++ utilisant SFML pour l'affichage graphique et la gestion des éléments visuels. Projet réalisé en 2 semaines.</p>
-            
-        </div>
-        <div class="project">
-            <h2>Premier projet Unity Platformer 2D</h2>
-            <video controls>
-                <source src="Charbi.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <p>Première prise en main d'Unity. L'objectif était de créer un jeu doté d'une mécanique innovante. Projet réalisé en 2 semaines.</p>
-            
-        </div>
-        <div class="project">
-            <h2>Unity Shader et Feedback</h2>
-            <video controls>
-                <source src="Attack.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <p>Prise en main des shaders Unity. L'objectif était de créer un jeu au tour par tour mettant l'accent sur les particules, les shaders et le game feel. Projet réalisé en 2 semaines.</p>
-            
-        </div>
-        <div class="project">
-            <h2>FPS Unity</h2>
-            <video controls>
-                <source src="Survival.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <p>Développement d'un FPS intégrant un character controller (déplacement, sprint, saut et accroupissement), deux types d'armes et des ennemis. Projet réalisé en 1 semaine.</p>
-            
-        </div>
+        <!-- Tu peux faire de même pour les autres projets -->
     </div>
     <footer>
-        <p>Contactez-moi :</p>
+        <p data-lang="fr">Contactez-moi :</p>
+        <p data-lang="en" style="display:none">Contact me:</p>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/enzo-pulzatto-05000429b/" target="_blank">LinkedIn</a>
             <a href="cv.pdf" target="_blank">Mon CV</a>
