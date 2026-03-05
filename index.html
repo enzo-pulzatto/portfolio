@@ -176,12 +176,12 @@
             const isFr = fr[0].style.display !== 'none';
             fr.forEach(el => el.style.display = isFr ? 'none' : 'block');
             en.forEach(el => el.style.display = isFr ? 'block' : 'none');
-            langBtn.textContent = isFr ? 'Switch to French' : 'Changer de langue';
+            langBtn.textContent = isFr ? 'Français' : 'English';
         }
     </script>
 </head>
 <body>
-    <button class="lang-btn" onclick="toggleLang()">Changer de langue</button>
+    <button class="lang-btn" onclick="toggleLang()">English</button>
     <header>
         <h1>Mon Portfolio</h1>
         <nav class="nav-links">

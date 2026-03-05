@@ -118,12 +118,12 @@
             const isFr = fr[0].style.display !== 'none';
             fr.forEach(el => el.style.display = isFr ? 'none' : 'block');
             en.forEach(el => el.style.display = isFr ? 'block' : 'none');
-            langBtn.textContent = isFr ? 'Switch to French' : 'Changer de langue';
+            langBtn.textContent = isFr ? 'Français' : 'English';
         }
     </script>
 </head>
 <body>
-    <button class="lang-btn" onclick="toggleLang()">Changer de langue</button>
+    <button class="lang-btn" onclick="toggleLang()">English</button>
     <header>
         <h1 class="header-title" data-lang="fr">Mes Projets</h1>
         <h1 class="header-title" data-lang="en" style="display:none">My Projects</h1>
@@ -203,6 +203,17 @@
             </video>
             <p data-lang="fr">Développement d’un prototype de FPS comprenant un character controller complet (déplacement, sprint, saut, accroupissement), la gestion de deux armes et des ennemis IA simples. Ce projet a renforcé mes compétences en C#, en architecture orientée objet et en gameplay programming.</p>
             <p data-lang="en" style="display:none">Development of a FPS prototype including a full character controller (movement, sprint, jump, crouch), two weapon types, and simple AI enemies. This project strengthened my skills in C#, object-oriented architecture, and gameplay programming.</p>
+        </div>
+        <div class="project">
+            <h2 data-lang="fr">Retro Beat them all Game unity</h2>
+            <h2 data-lang="en" style="display:none">Retro Beat them all Game unity</h2>
+            <video controls>
+                <source src="JeanLouis.mp4" type="video/mp4">
+                <span data-lang="fr">Votre navigateur ne supporte pas la vidéo.</span>
+                <span data-lang="en" style="display:none">Your browser does not support the video.</span>
+            </video>
+            <p data-lang="fr">Prise en charge du développement technique d'un jeu beat 'em up rétro, de la conception à la réalisation, dans le cadre d'un projet professionnel en duo. Mes responsabilités couvraient l'implémentation du gameplay, de l'IA ennemie et de la structure globale du jeu, renforçant ainsi ma vision complète du pipeline de production.</p>
+            <p data-lang="en" style="display:none">Spearheaded the end-to-end technical development of a retro beat 'em up as part of a commissioned two-person project. My responsibilities included implementing core gameplay, enemy AI, and the overall game structure, providing me with a holistic view of the production pipeline.</p>
         </div>
     </div>
     <footer>
